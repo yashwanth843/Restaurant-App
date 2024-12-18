@@ -1,0 +1,42 @@
+.mainContainer {
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.dishUnorder {
+  display: flex;
+  overflow-y: scroll;
+  width: 360px;
+  gap: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .dishUnorder {
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+.listDish {
+  list-style: none;
+}
+
+.tabButton {
+  background-color: transparent;
+  border: none;
+  width: 180px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 250px;
+}
+
+.activeTab {
+  color: rgb(245, 88, 88);
+  border-bottom: 2px solid red;
+}
