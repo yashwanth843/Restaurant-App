@@ -12,11 +12,7 @@ const Header = props => {
           <button type="button" className="cartButton">
             <IoCartOutline size="30" />
           </button>
-          <p className="countCart">{cartItems.length}</p>
-          <p className="total">
-            <span className="totalquantity">Total Quantity:</span>
-            {cartCount}
-          </p>
+          <p className="countCart"> {cartCount}</p>
         </div>
       </div>
     </nav>

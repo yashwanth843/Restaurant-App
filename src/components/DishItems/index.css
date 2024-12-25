@@ -75,3 +75,21 @@
   color: rgb(250, 72, 72);
   font-family: 'Roboto';
 }
+
+.typeDish {
+  border: 2px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  color: green;
+}
+
+.typeDish2 {
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  color: red;
+}

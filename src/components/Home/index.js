@@ -51,6 +51,7 @@ class Home extends Component {
           dishImage: eachItem.dish_image,
           dishName: eachItem.dish_name,
           dishPrice: eachItem.dish_price,
+          quantity: 0,
         })),
       }))
       this.setState({
@@ -101,7 +102,7 @@ class Home extends Component {
     if (existingDishIndex !== -1) {
       const updatedCartItems = cartItems
         .map(item => {
-          if (item.dishId === dish.dishId) {
+          if (item.dishId === dish.dishId && item.quantity > 0) {
             return {...item, quantity: item.quantity - 1}
           }
           return item
@@ -123,10 +124,21 @@ class Home extends Component {
   }
 
   renderSuccessView = () => {
-    const {restaurantData, tabDetails, activeTabId, cartItems} = this.state
+    const {
+      restaurantData,
+      tabDetails,
+      activeTabId,
+      cartItems,
+      restaurantName,
+    } = this.state
 
     return (
       <div className="maindishContainer">
+        <Header
+          name={restaurantName}
+          cartItems={cartItems}
+          cartCount={this.getCartCount()}
+        />
         <ul className="dishUnorder">
           {restaurantData.map(each => (
             <li className="listDish">
@@ -173,14 +185,8 @@ class Home extends Component {
   }
 
   render() {
-    const {restaurantName, cartItems} = this.state
     return (
       <div className="mainContainer">
-        <Header
-          name={restaurantName}
-          cartItems={cartItems}
-          cartCount={this.getCartCount()}
-        />
         <div className="secondContainer">{this.renderResult()}</div>
       </div>
     )
