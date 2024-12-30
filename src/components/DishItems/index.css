@@ -93,3 +93,15 @@
   padding: 2px;
   color: red;
 }
+
+.addButton {
+  background-color: green;
+  width: 100px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Roboto';
+  border-radius: 50px;
+  margin: 5px;
+}

@@ -1,0 +1,19 @@
+.cartContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.removeAll {
+  align-self: flex-end;
+  margin-right: 20px;
+  background-color: rgb(46, 192, 249);
+  border-radius: 10px;
+  width: 90px;
+  height: 30px;
+  border: none;
+  color: #ffffff;
+  font-family: 'Roboto';
+  cursor: pointer;
+}

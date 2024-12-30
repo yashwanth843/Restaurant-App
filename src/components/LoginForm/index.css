@@ -1,0 +1,62 @@
+.loginFormContainer {
+  background-image: url('https://res.cloudinary.com/dlaypemls/image/upload/v1735207011/pngtree-ramadan-special-healthy-fast-food-restaurant-image_15595219_b09wsw.png');
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userNameContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-Container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 50px;
+}
+
+.userHeader {
+  align-self: flex-start;
+}
+
+.loginButtonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginButton {
+  width: 120px;
+  height: 30px;
+  background-color: rgb(89, 89, 250);
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: 'Roboto';
+  cursor: pointer;
+}
+
+.userHeader {
+  color: rgb(8, 5, 5);
+}
+
+.userInput {
+  width: 200px;
+  height: 30px;
+  margin-top: 5px;
+  color: rgb(95, 93, 93);
+  font-family: 'Roboto';
+  outline: none;
+}
+
+.error_msg {
+  color: rgb(245, 45, 45);
+  font-family: 'Roboto';
+}

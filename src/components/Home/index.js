@@ -1,4 +1,6 @@
 import {Component} from 'react'
+import Cookies from 'js-cookie'
+import {Redirect} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
 import Header from '../Header'
 import DishItems from '../DishItems'
@@ -27,9 +29,13 @@ class Home extends Component {
 
   getRestaurantData = async () => {
     this.setState({apiStauts: apiStautsContant.inProgress})
+    const jwtToken = Cookies.get('jwt_token')
     const url =
       'https://apis2.ccbp.in/restaurant-app/restaurant-menu-list-details'
     const options = {
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
       method: 'GET',
     }
     const response = await fetch(url, options)
@@ -131,14 +137,9 @@ class Home extends Component {
       cartItems,
       restaurantName,
     } = this.state
-
     return (
       <div className="maindishContainer">
-        <Header
-          name={restaurantName}
-          cartItems={cartItems}
-          cartCount={this.getCartCount()}
-        />
+        <Header name={restaurantName} cartCount={this.getCartCount()} />
         <ul className="dishUnorder">
           {restaurantData.map(each => (
             <li className="listDish">
@@ -185,6 +186,10 @@ class Home extends Component {
   }
 
   render() {
+    const jwtToken = Cookies.get('jwt_token')
+    if (jwtToken === undefined) {
+      return <Redirect to="/login" />
+    }
     return (
       <div className="mainContainer">
         <div className="secondContainer">{this.renderResult()}</div>

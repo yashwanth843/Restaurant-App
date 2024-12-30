@@ -1,0 +1,19 @@
+.cartOrderList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.emptyContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptyImage {
+  width: 350px;
+  height: 350px;
+  margin-left: 400px;
+}
