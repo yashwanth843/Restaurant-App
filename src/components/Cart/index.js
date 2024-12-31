@@ -10,6 +10,7 @@ const Cart = () => (
       const onClickAllRemove = () => {
         removeAllCartItems()
       }
+
       return (
         <>
           <Header />

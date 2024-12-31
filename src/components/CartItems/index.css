@@ -37,10 +37,10 @@
   cursor: pointer;
 }
 
-.delete{
+.delete {
   background-color: rgb(44, 185, 241);
   color: #ffffff;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   border: none;
   width: 100px;
   height: 30px;
